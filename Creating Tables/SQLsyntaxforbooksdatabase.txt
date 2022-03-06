@@ -1,4 +1,6 @@
-1. CREATE TABLE person (
+1. Creating tables:
+
+CREATE TABLE person (
   first_name varchar(15),
   last_name varchar(15),
   age integer,
@@ -6,7 +8,7 @@
   ssn char(9)
 );
 
-2. CREATE TABLE book (
+CREATE TABLE book (
   title varchar(100),
   isbn varchar(50),
   pages integer,
@@ -15,15 +17,31 @@
   publisher varchar(100)
 );
 
-3. CREATE TABLE chapter (
+CREATE TABLE chapter (
   id integer,
   number integer,
   title varchar(50),
   content varchar(1024)
 );
 
-4. CREATE TABLE author (
+CREATE TABLE author (
   name varchar(50),
   bio varchar(100),
   email varchar(20)
 );
+
+2. Querying tables:
+
+NSERT INTO book VALUES (
+  'Postgres for Beginners',
+  '0-5980-6249-1',
+  25,
+  4.99,
+  'Learn Postgres the Easy Way',
+  'Codecademy Publishing'
+);
+
+SELECT * FROM book WHERE title = 'Postgres for Beginners';
+
+SELECT * FROM book WHERE isbn = '0-5980-6249-1';
+
