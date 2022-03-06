@@ -14,3 +14,10 @@
   description varchar(256),
   publisher varchar(100)
 );
+
+3. CREATE TABLE chapter (
+  id integer,
+  number integer,
+  title varchar(50),
+  content varchar(1024)
+);
