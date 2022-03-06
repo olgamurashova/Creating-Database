@@ -1,0 +1,7 @@
+1. CREATE TABLE person (
+  first_name varchar(15),
+  last_name varchar(15),
+  age integer,
+  …
+  ssn char(9)
+);
