@@ -6,3 +6,9 @@ When creating database, we start with designing a database schema that  is docum
 
 Below is an example of querying the ```information_schema.key_column_usage``` view to validate the existence of a primary key in the tables:
 
+![informationschema](https://user-images.githubusercontent.com/89424060/157280094-7d01cea2-68b2-4f43-a44c-921224359833.png)
+
+
+### Tools used
+
++ PostgreSQL
