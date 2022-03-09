@@ -28,4 +28,9 @@ CREATE TABLE chapter (
   book_isbn varchar(50) REFERENCES book(isbn)
 );
  
- 
+SELECT 
+constraint_name, table_name, column_name
+FROM
+information_schema.key_column_usage
+WHERE
+table_name = 'chapter';
