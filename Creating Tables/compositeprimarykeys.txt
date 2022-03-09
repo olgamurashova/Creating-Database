@@ -1,0 +1,8 @@
+CREATE TABLE popular_books (
+ book_title varchar(100),
+ author_name varchar(50),
+ number_sold integer,
+ number_previewed integer,
+ PRIMARY KEY (book_title, author_name)
+);
+
