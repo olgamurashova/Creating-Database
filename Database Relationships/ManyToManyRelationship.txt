@@ -33,3 +33,37 @@ CREATE TABLE books_authors (
 SELECT constraint_name, table_name, column_name
 FROM information_schema.key_column_usage
 WHERE table_name = 'books_authors';
+
+_________________________________________
+
+Another example
+
+1. INSERT INTO books_authors VALUES (
+  '123457890',
+  'jkey@db.com'
+);
+
+INSERT INTO books_authors VALUES (
+  '123457890',
+  'cindex@db.com'
+);
+
+INSERT INTO books_authors VALUES (
+  '987654321',
+  'cindex@db.com'
+);
+
+2. Query to show the one-to-many relationship between book and author:
+
+SELECT 
+book.title AS book_title, 
+author.name AS author_name,
+book.description AS book_description
+FROM 
+book, author, books_authors
+WHERE 
+book.isbn = books_authors.book_isbn
+AND 
+author.email = books_authors.author_email;
+
+3. Query to show the one-to-many relationship between author and book:
