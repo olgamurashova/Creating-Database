@@ -67,3 +67,18 @@ AND
 author.email = books_authors.author_email;
 
 3. Query to show the one-to-many relationship between author and book:
+
+SELECT 
+author.name AS author_name,
+author.email AS author_email,
+book.title AS book_title
+FROM 
+book
+JOIN 
+books_authors
+ON 
+book.isbn = books_authors.book_isbn
+JOIN
+author
+ON
+author.email = books_authors.author_email;
