@@ -1,3 +1,4 @@
+1. Creating one-to-many-relationship:
 CREATE TABLE page (
   id integer PRIMARY KEY,
   chapter_id integer REFERENCES chapter(id),
@@ -5,7 +6,11 @@ CREATE TABLE page (
   header varchar(20),
   footer varchar(20)
 );
+
+2. Dropping a column:
 ALTER TABLE chapter
 DROP COLUMN content;
+
+3. 
 
 
