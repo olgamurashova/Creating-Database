@@ -1,0 +1,22 @@
+To implement a many-to-many relationship in a relational database, we would create a third cross-reference table also known as a join table. It will have these two constraints:
+
+foreign keys referencing the primary keys of the two member tables.
+a composite primary key made up of the two foreign keys.
+Let’s elaborate on this further with the recipe and ingredient many-to-many relationship. Let’s say a recipe table has the following columns:
+
+id (primary key)
+name
+serving_size
+preparation_time
+cook_time
+An ingredient table has the following columns:
+
+id (primary key)
+name
+amount
+A third cross-reference table, recipes_ingredients, will support the following columns:
+
+recipe_id (foreign key referencing recipe table’s id)(primary key)
+ingredient_id (foreign key referencing ingredient table’s id) (primary key)
+Both recipe_id and ingredient_id also serve as a composite primary key for recipes_ingredients.
+
