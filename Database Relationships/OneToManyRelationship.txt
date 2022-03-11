@@ -22,7 +22,7 @@ information_schema.key_column_usage
 WHERE 
 table_name = 'page';
 
-4. Populating the table with sample data:
+4. Populating the tables with sample data:
 
 INSERT INTO book VALUES (
   'Learn PostgreSQL',
