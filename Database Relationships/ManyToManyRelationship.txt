@@ -20,3 +20,16 @@ recipe_id (foreign key referencing recipe table’s id)(primary key)
 ingredient_id (foreign key referencing ingredient table’s id) (primary key)
 Both recipe_id and ingredient_id also serve as a composite primary key for recipes_ingredients.
 
+1. Creating cross-reference table:
+
+CREATE TABLE books_authors (
+  book_isbn varchar(50) REFERENCES book(isbn),
+  author_email varchar(100) REFERENCES author(email),
+  PRIMARY KEY (book_isbn, author_email)
+);
+
+2. Validating the existence of primary and foreign keys:
+
+SELECT constraint_name, table_name, column_name
+FROM information_schema.key_column_usage
+WHERE table_name = 'books_authors';
