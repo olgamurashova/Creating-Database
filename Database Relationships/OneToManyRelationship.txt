@@ -1,4 +1,5 @@
 1. Creating one-to-many-relationship:
+
 CREATE TABLE page (
   id integer PRIMARY KEY,
   chapter_id integer REFERENCES chapter(id),
@@ -8,9 +9,15 @@ CREATE TABLE page (
 );
 
 2. Dropping a column:
+
 ALTER TABLE chapter
 DROP COLUMN content;
 
-3. 
+3. Writing a query to validate the existence of key constraint:
 
-
+SELECT  
+constraint_name, table_name, column_name
+FROM 
+information_schema.key_column_usage
+WHERE 
+table_name = 'page';
