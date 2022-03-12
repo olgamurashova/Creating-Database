@@ -1,4 +1,4 @@
-1. Sample trigger query:
+1. Sample trigger query(UPDATE):
 
 CREATE TRIGGER check_update
     BEFORE UPDATE ON accounts
