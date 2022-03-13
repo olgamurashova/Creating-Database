@@ -26,5 +26,10 @@ AFTER UPDATE ON customers
 FOR EACH ROW
 EXECUTE PROCEDURE log_customers_change();
 
-4. 
+4. Sample trigger(UPDATE/ for each statement)
+
+CREATE TRIGGER each_statement_trigger
+AFTER UPDATE ON customers
+FOR EACH STATEMENT 
+EXECUTE PROCEDURE statement_function();
 
