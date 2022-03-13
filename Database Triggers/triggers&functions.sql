@@ -60,3 +60,27 @@ BEFORE UPDATE ON clients
 FOR EACH ROW
 WHEN (NEW.total_spent < 1000)
 EXECUTE PROCEDURE  set_low_spender();
+
+7. Sample update triggers:
+
+CREATE TRIGGER update_aplha
+BEFORE UPDATE ON orders
+FOR EACH ROW
+EXECUTE PROCEDURE update_first();
+
+CREATE TRIGGER update_bravo
+BEFORE UPDATE ON orders
+FOR EACH ROW
+EXECUTE PROCEDURE update_second();
+
+_________________________________
+
+REMOVING TRIGGERS
+
+1. Dropping trigger example:
+
+DROP TRIGGER insert_trigger ON customers;
+
+Checking what triggers exist:
+
+SELECT * FROM information_schema.triggers;
