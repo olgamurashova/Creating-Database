@@ -19,3 +19,12 @@ CREATE OR REPLACE FUNCTION insert_function() RETURNS TRIGGER AS $$
     END;
 $$ LANGUAGE PLPGSQL;
 
+3. Sample trigger(UPDATE/AFTER)
+
+CREATE TRIGGER after_trigger
+AFTER UPDATE ON customers
+FOR EACH ROW
+EXECUTE PROCEDURE log_customers_change();
+
+4. 
+
