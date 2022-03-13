@@ -12,4 +12,10 @@ CREATE TRIGGER insert_trigger
     FOR EACH ROW
     EXECUTE PROCEDURE insert_function();
 
+CREATE OR REPLACE FUNCTION insert_function() RETURNS TRIGGER AS $$
+    BEGIN
+        NEW.last_name := 'UNKOWN';
+        RETURN NEW;
+    END;
+$$ LANGUAGE PLPGSQL;
 
