@@ -67,4 +67,14 @@ CREATE OR REPLACE FUNCTION log_customers_change() RETURNS TRIGGER AS $$
     END;
 $$ LANGUAGE PLPGSQL;
 
-// 
+// Inserting values in the table and checking if the trigger has been recorded
+
+INSERT INTO customers (first_name, last_name, email_address, home_phone, city, state_name, years_old)
+VALUES ('Jeffrey','Cook','Jeffrey.Cook@example.com','202-555-0398','Jersey city','New Jersey',66);
+
+SELECT *
+FROM customers
+ORDER BY customer_id;
+
+SELECT *
+FROM customers_log;
