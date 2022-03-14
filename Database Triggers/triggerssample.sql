@@ -30,3 +30,16 @@ ORDER BY customer_id;
 
 SELECT *
 FROM customers_log;
+
+//Confirming no log is created when modifying a column not covered by the trigger function
+
+UPDATE customers
+SET years_old = 333
+WHERE customer_id = 1;
+
+SELECT *
+FROM customers
+ORDER BY customer_id;
+
+SELECT *
+FROM customers_log;
