@@ -95,6 +95,10 @@ WHERE customer_id = 2;
 SELECT * FROM customers ORDER BY customer_id;
 SELECT * FROM customers_log;
 
+// Dropping a trigger
+
+ DROP TRIGGER IF EXISTS customer_min_age ON customers;
+ SELECT * FROM information_schema.triggers;
 
 SELECT *
 FROM customers_log;
